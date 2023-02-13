@@ -1,6 +1,6 @@
 export const tutorialStatusEnum = [
-  "action",
-  "completed",
+  "bar",
+  "sankey",
   "inProgress",
   "finished"
 ] as const;

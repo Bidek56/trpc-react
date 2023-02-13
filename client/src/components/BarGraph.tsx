@@ -1,4 +1,4 @@
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 import { useAppContext } from "../context/AppContext";
 
@@ -88,7 +88,7 @@ const BarGraph = () => {
           , amt: x.amt / selectedConv
     }));
 
-    console.log("Graph render");
+    // console.log("Graph render");
 
     return (
       <ResponsiveContainer width={700} height="75%">

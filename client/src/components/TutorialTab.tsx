@@ -9,7 +9,7 @@ interface TutorialTabProps {
 }
 
 export function TutorialTab({ tab }: TutorialTabProps) {
-  console.log("Tut tab:" + tab);
+  // console.log("Tut tab:" + tab);
   const { data } = trpc.tutorial.getByStatus.useQuery({ status: tab });
 
   function chunkTutorials(data: Tutorial[], chunkSize: number) {

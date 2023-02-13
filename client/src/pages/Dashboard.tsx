@@ -50,10 +50,10 @@ export function Dashboard() {
         </div>
         {videoStatusOptions.map( (tab) => {
           switch (tab.value) {
-            case "action":
+            case "bar":
               // console.log("Tab action:" + tab.value);
               return isTabActive(tab.value) && <ActionTab key={tab.value} tab={tab.value} />
-            case "completed":
+            case "sankey":
               return isTabActive(tab.value) && <SankeyChart key={tab.value} />
             default:
               return isTabActive(tab.value) && <TutorialTab key={tab.value} tab={tab.value} />
