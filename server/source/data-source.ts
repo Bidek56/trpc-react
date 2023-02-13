@@ -10,7 +10,7 @@ export const AppDataSource = new DataSource({
   entities: [tutorialEntity, actionEntity],
   //only used for development
   synchronize: true,
-  dropSchema: false,
+  dropSchema: true,
 
   logging: true,
 });

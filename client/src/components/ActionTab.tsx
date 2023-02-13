@@ -1,10 +1,10 @@
 import { Tutorial, tutorialStatus } from "../../../lib";
-import { trpc } from "../utils/trpc";
-import { TutorialCard } from "./TutorialCard";
+// import { trpc } from "../utils/trpc";
+// import { TutorialCard } from "./TutorialCard";
 import TopGrid from './TopGrid'
 import  BarGraph from './BarGraph'
 
-const NUMBER_OF_COLUMNS = 2;
+// const NUMBER_OF_COLUMNS = 2;
 
 interface TutorialTabProps {
   tab: tutorialStatus;
@@ -16,26 +16,20 @@ const ActionTab = ({ tab }: TutorialTabProps) => {
   // const actions = trpc.action.list.useQuery();
   // console.log("Act tab:" + tab + ":", actions.data);
 
-  function chunkTutorials(data: Tutorial[], chunkSize: number) {
-    const chunks = [];
-    let i = 0;
-    while (i < data.length) {
-      chunks.push(data.slice(i, (i += chunkSize)));
-    }
-    return chunks;
-  }
+  // function chunkTutorials(data: Tutorial[], chunkSize: number) {
+  //   const chunks = [];
+  //   let i = 0;
+  //   while (i < data.length) {
+  //     chunks.push(data.slice(i, (i += chunkSize)));
+  //   }
+  //   return chunks;
+  // }
 
   // if (!data) {
   //   return null;
   // }
 
-  return (
-    <div className="columns">
-      <div className="column">
-        <TopGrid/>
-        <BarGraph/>
-      </div>
-      {/* {chunkTutorials(data, NUMBER_OF_COLUMNS).map((row, index) => (
+        /* {chunkTutorials(data, NUMBER_OF_COLUMNS).map((row, index) => (
         <div key={index} className="columns">
           {row.map((tutorial) => (
             <div className="column">
@@ -47,7 +41,14 @@ const ActionTab = ({ tab }: TutorialTabProps) => {
               .fill(null)
               .map((_, index) => <div className="column" key={index} />)}
         </div>
-      ))} */}
+      ))} */
+
+  return (
+    <div className="columns">
+      <div className="column">
+        <TopGrid/>
+        <BarGraph/>
+      </div>
     </div>
   );
 }

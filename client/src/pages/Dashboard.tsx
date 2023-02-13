@@ -9,6 +9,8 @@ import { TutorialTab } from "../components/TutorialTab";
 
 import {ActionTab} from "../components/ActionTab";
 
+import SankeyChart from "../components/SankeyChart";
+
 export const videoStatusOptions = tutorialStatusEnum.map((status) => ({
   value: status,
   label: pascalCaseToSentence(status),
@@ -49,8 +51,10 @@ export function Dashboard() {
         {videoStatusOptions.map( (tab) => {
           switch (tab.value) {
             case "action":
-              console.log("Tab action:" + tab.value);
+              // console.log("Tab action:" + tab.value);
               return isTabActive(tab.value) && <ActionTab key={tab.value} tab={tab.value} />
+            case "completed":
+              return isTabActive(tab.value) && <SankeyChart key={tab.value} />
             default:
               return isTabActive(tab.value) && <TutorialTab key={tab.value} tab={tab.value} />
           }

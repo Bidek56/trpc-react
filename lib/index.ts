@@ -2,7 +2,6 @@ export const tutorialStatusEnum = [
   "action",
   "completed",
   "inProgress",
-  "watchLater",
   "finished"
 ] as const;
 

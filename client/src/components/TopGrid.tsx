@@ -1,25 +1,23 @@
-import {useState} from 'react'
-
-import { useAppContext } from "../context/AppContext";
+import { useAppContext, AppContextValue } from "../context/AppContext";
 
 const TopGrid = () => {
-        const { setSelectedTime, setSelectedConv } = useAppContext();
+    const { setSelectedTime, setSelectedConv, setSelectedProp, setSelectedChannel }: AppContextValue = useAppContext();
 
-        const handleTimeChange = (event : React.ChangeEvent<HTMLSelectElement>) => {
-            setSelectedTime(Number(event.target.value));
-        };
+    const handleTimeChange = (event : React.ChangeEvent<HTMLSelectElement>) => {
+        setSelectedTime(Number(event.target.value));
+    };
 
-        const handleConvChange = (event : React.ChangeEvent<HTMLSelectElement>) => {
-            setSelectedConv(Number(event.target.value));
-        };
+    const handleConvChange = (event : React.ChangeEvent<HTMLSelectElement>) => {
+        setSelectedConv(Number(event.target.value));
+    };
 
-        const handlePropsChange = (event : React.ChangeEvent<HTMLSelectElement>) => {
-            // setProps(event.target.value as string);
-        };
+    const handlePropsChange = (event : React.ChangeEvent<HTMLSelectElement>) => {
+        setSelectedProp(event.target.value as string);
+    };
 
-        const handleChannelChange = (event : React.ChangeEvent<HTMLSelectElement>) => {
-            // setChannel(event.target.value as string);
-        };
+    const handleChannelChange = (event : React.ChangeEvent<HTMLSelectElement>) => {
+        setSelectedChannel(event.target.value as string);
+    };
 
     return (
         <div className="columns tags are-medium">
@@ -84,4 +82,4 @@ const TopGrid = () => {
     )
 }
 
-export default TopGrid
+export default TopGrid;

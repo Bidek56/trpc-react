@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { trpc } from "./utils/trpc";
 import "@fortawesome/fontawesome-free/css/all.css";
@@ -8,6 +7,7 @@ import "bulma/css/bulma.css";
 import "bulma-slider/dist/css/bulma-slider.min.css";
 import { AppProvider } from "./context/AppContext";
 import { httpBatchLink } from "@trpc/client";
+import { Dashboard } from "./pages/Dashboard";
 
 const trpcUrl = "http://localhost:4000/trpc";
 const queryClient = new QueryClient();
@@ -24,7 +24,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <AppProvider>
       <trpc.Provider client={trpcClient} queryClient={queryClient}>
         <QueryClientProvider client={queryClient}>
-          <App />
+          <Dashboard />
         </QueryClientProvider>
       </trpc.Provider>
     </AppProvider>
