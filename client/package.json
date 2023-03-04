@@ -10,16 +10,16 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.3.0",
-    "@tanstack/react-query": "^4.24.6",
-    "@trpc/client": "^10.11.0",
-    "@trpc/react-query": "^10.11.0",
-    "@trpc/server": "^10.11.0",
+    "@tanstack/react-query": "^4.24.10",
+    "@trpc/client": "^10.14.0",
+    "@trpc/react-query": "^10.14.0",
+    "@trpc/server": "^10.14.0",
     "bulma": "^0.9.4",
     "bulma-slider": "^2.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-youtube": "^10.1.0",
-    "recharts": "^2.4.1",
+    "recharts": "^2.4.3",
     "use-debounce": "^9.0.3"
   },
   "devDependencies": {
@@ -27,6 +27,6 @@
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react": "^3.1.0",
     "typescript": "^4.9.5",
-    "vite": "^4.1.1"
+    "vite": "^4.1.4"
   }
 }

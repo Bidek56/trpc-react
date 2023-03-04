@@ -1,12 +1,12 @@
 import { AppDataSource } from "../data-source";
 import { tutorialEntity } from "../entity/tutorials";
-import { actionEntity } from "../entity/action";
+import { Action } from "../entity/action";
 import { t } from "../trpc";
 import { z } from "zod";
 import { tutorialStatusEnum } from "../../../lib";
 
 const tutorialRepository = AppDataSource.getRepository(tutorialEntity);
-const actionRepository = AppDataSource.getRepository(actionEntity);
+const actionRepository = AppDataSource.getRepository(Action);
 
 const createSchema = z.object({
   youtubeUrl: z.string(),

@@ -1,7 +1,7 @@
 import { EntitySchema } from "typeorm";
-import { Action, tutorialStatusEnum } from "../../../lib";
+import { iAction, tutorialStatusEnum } from "../../../lib";
 
-export const actionEntity = new EntitySchema<Action>({
+export const Action = new EntitySchema<iAction>({
   name: "Action",
   columns: {
     id: {

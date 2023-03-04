@@ -18,7 +18,7 @@ export interface Tutorial {
 
 export type actionStatus = typeof tutorialStatusEnum[number];
 
-export interface Action {
+export interface iAction {
   tid: number;
   wid: number;
   date: Date;
