@@ -20,7 +20,7 @@ async function connectDb() {
   }
 }
 
-const appRouter = t.router({
+export const appRouter = t.router({
   tutorial: tutorialRouter,
   action: actionRouter
 });
