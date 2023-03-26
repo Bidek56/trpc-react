@@ -3,15 +3,15 @@ import * as trpcExpress from "@trpc/server/adapters/express";
 import cors from "cors";
 import express from "express";
 import "reflect-metadata";
-import { AppDataSource } from "./source/data-source";
-import { createContext, t } from "./source/trpc";
-import { actionRouter, tutorialRouter } from "./source/routes/tutorial";
+import { AppDataSource } from "./src/data-source";
+import { createContext, t } from "./src/trpc";
+import { actionRouter, tutorialRouter } from "./src/routes/tutorial";
 const PORT = 4000;
 
 const app = express();
 app.use(cors());
 
-async function connectDb() {
+const connectDb = async () => {
   try {
     await AppDataSource.initialize();
     console.log("Connected to database");

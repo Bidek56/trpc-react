@@ -58,8 +58,7 @@ export function Dashboard() {
             default:
               return isTabActive(tab.value) && <TutorialTab key={tab.value} tab={tab.value} />
           }
-        }
-        )}
+        })}
       </Page>
       {showModal && <VideoModal />}
     </>

@@ -5,17 +5,17 @@ export class Action {
     @PrimaryGeneratedColumn({unsigned: true})
     id: number;
 
-    @Column({type: 'number'})
+    @Column({type: 'int'})
     @Index({unique: true})
     tid: number;
 
-    @Column({type: 'number'})
+    @Column({type: 'int'})
     wid: number;
 
-    @Column({type: 'number'})
+    @Column({type: 'int'})
     pid: number;
 
-    @Column({type: 'number'})
+    @Column({type: 'int'})
     aid: number;
 
     @Column({type: 'date'})

@@ -1,4 +1,4 @@
-import { Tutorial, tutorialStatus } from "../../../lib/";
+import { iTutorial, tutorialStatus } from "../../../lib/";
 import { useEffect, useState } from "react";
 import { trpc } from "../utils/trpc";
 import { VideoProgressSlider } from "./VideoProgressSlider";
@@ -8,7 +8,7 @@ import { YoutubePreview } from "./YoutubePreview";
 
 import { useAppContext } from "../context/AppContext";
 interface TutorialCardProps {
-  tutorial: Tutorial;
+  tutorial: iTutorial;
 }
 interface TutorialPatchPayload {
   id: number;

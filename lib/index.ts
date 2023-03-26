@@ -2,12 +2,12 @@ export const tutorialStatusEnum = [
   "bar",
   "sankey",
   "inProgress",
-  "finished"
+  "tutorial"
 ] as const;
 
 export type tutorialStatus = typeof tutorialStatusEnum[number];
 
-export interface Tutorial {
+export interface iTutorial {
   id: number;
   youtubeUrl: string;
   title: string;

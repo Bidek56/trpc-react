@@ -1,11 +1,11 @@
 import { AppDataSource } from "../data-source";
-import { tutorialEntity } from "../entity/tutorials";
-import { Action } from "../entity/action";
+import { Tutorial } from "../db/factory/tutorial.entity";
+import { Action } from "../db/factory/action.entity";
 import { t } from "../trpc";
 import { z } from "zod";
 import { tutorialStatusEnum } from "../../../lib";
 
-const tutorialRepository = AppDataSource.getRepository(tutorialEntity);
+const tutorialRepository = AppDataSource.getRepository(Tutorial);
 const actionRepository = AppDataSource.getRepository(Action);
 
 const createSchema = z.object({

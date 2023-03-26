@@ -1,4 +1,4 @@
-import { Tutorial, tutorialStatus } from "../../../lib";
+import { iTutorial, tutorialStatus } from "../../../lib";
 import { trpc } from "../utils/trpc";
 import { TutorialCard } from "./TutorialCard";
 
@@ -9,10 +9,15 @@ interface TutorialTabProps {
 }
 
 export function TutorialTab({ tab }: TutorialTabProps) {
-  // console.log("Tut tab:" + tab);
-  const { data } = trpc.tutorial.getByStatus.useQuery({ status: tab });
+  const { isLoading, isError, data, error } = trpc.tutorial.getByStatus.useQuery({ status: tab });
 
-  function chunkTutorials(data: Tutorial[], chunkSize: number) {
+  if (isLoading)
+    return <div>Loading....</div>
+
+  if (isError)
+    return <span>Error: {error.message}</span>
+
+  function chunkTutorials(data: iTutorial[], chunkSize: number) {
     const chunks = [];
     let i = 0;
     while (i < data.length) {
@@ -21,6 +26,8 @@ export function TutorialTab({ tab }: TutorialTabProps) {
     return chunks;
   }
 
+  // console.log("tab data:", data);
+
   if (!data) {
     return null;
   }
@@ -28,9 +35,9 @@ export function TutorialTab({ tab }: TutorialTabProps) {
     <>
       {chunkTutorials(data, NUMBER_OF_COLUMNS).map((row, index) => (
         <div key={index} className="columns">
-          {row.map((tutorial) => (
+          {row.map((tutorial, key) => (
             <div className="column">
-              <TutorialCard tutorial={tutorial} />
+              <TutorialCard key={key} tutorial={tutorial} />
             </div>
           ))}
           {row.length < NUMBER_OF_COLUMNS &&
