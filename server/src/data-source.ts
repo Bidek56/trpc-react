@@ -8,9 +8,8 @@ const dbOptions: DataSourceOptions & SeederOptions = {
   type: "better-sqlite3",
   database: "database.sqlite",
 
-  // entities: [`${__dirname}/db/factory/*.entity.ts`],
   entities: [Tutorial, Action],
-  factories: [`${__dirname}/src/db/factory/**/*.factory.ts`],
+  factories: [`src/db/factory/*.factory.ts`],
   seeds: [MainSeeder],
 
   // only used for development

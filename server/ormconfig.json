@@ -2,5 +2,7 @@
     "type": "better-sqlite3",
     "database": "database.sqlite",
     "synchronize": true,
-    "logging": false
+    "logging": false,
+    "seeds": ["src/db/seeds/*.ts"],
+    "factories": ["src/db/factory/*.factory.ts"]
   }
