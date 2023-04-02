@@ -5,7 +5,7 @@ import express from "express";
 import "reflect-metadata";
 import { AppDataSource } from "./src/data-source";
 import { createContext, t } from "./src/trpc";
-import { actionRouter, tutorialRouter } from "./src/routes/tutorial";
+import { actionRouter, tutorialRouter, timeRouter } from "./src/routes/tutorial";
 const PORT = 4000;
 
 const app = express();
@@ -22,7 +22,8 @@ export const connectDb = async () => {
 
 export const appRouter = t.router({
   tutorial: tutorialRouter,
-  action: actionRouter
+  action: actionRouter,
+  time: timeRouter
 });
 
 export type AppRouter = typeof appRouter;

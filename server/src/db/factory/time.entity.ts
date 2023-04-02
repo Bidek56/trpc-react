@@ -1,26 +1,24 @@
 import { Entity, PrimaryGeneratedColumn, Index, Column } from 'typeorm';
 
-@Entity()
-export class Action {
+@Entity('time')
+export class Time {
     @PrimaryGeneratedColumn({unsigned: true})
     id: number;
 
     @Column({type: 'int'})
-    @Index({unique: true})
-    tid: number;
+    uv: number;
 
     @Column({type: 'int'})
-    wid: number;
+    pv: number;
 
     @Column({type: 'int'})
-    pid: number;
-
-    @Column({type: 'int'})
-    aid: number;
+    amt: number;
 
     @Column({type: 'date'})
+    @Index({unique: true})
     date: Date
 
-    @Column({type: 'varchar', length: 5, default: null, nullable: true})
-    status: string;
+    @Column({type: 'varchar', length: 15, default: null, nullable: true})
+    @Index({unique: true})
+    name: string;
 }

@@ -28,3 +28,11 @@ export interface iAction {
   count: number;
   status: actionStatus;
 }
+
+export interface iTime {
+  date: string,
+  name: string,
+  uv: number,
+  pv: number,
+  amt: number,
+}

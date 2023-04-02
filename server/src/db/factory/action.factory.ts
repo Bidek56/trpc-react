@@ -1,6 +1,5 @@
 import { Action } from './action.entity'
 import { setSeederFactory } from 'typeorm-extension';
-import { faker } from '@faker-js/faker';
 
 export default setSeederFactory(Action, (faker) => {
     const action = new Action();

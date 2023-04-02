@@ -1,70 +1,18 @@
+import { trpc } from "../utils/trpc";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-
 import { useAppContext } from "../context/AppContext";
-
-interface iTime {
-  date: string,
-  name: string,
-  uv: number,
-  pv: number,
-  amt: number,
-}
-
-const data: iTime[] = [
-  {
-    date: '1/1/2023',
-    name: 'Page A',
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
-  },
-  {
-    date: '1/2/2023',
-    name: 'Page B',
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
-  },
-  {
-    date: '1/3/2023',
-    name: 'Page C',
-    uv: 2000,
-    pv: 9800,
-    amt: 2290,
-  },
-  {
-    date: '1/4/2023',
-    name: 'Page D',
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
-  },
-  {
-    date: '1/5/2023',
-    name: 'Page E',
-    uv: 1890,
-    pv: 4800,
-    amt: 2181,
-  },
-  {
-    date: '1/6/2023',
-    name: 'Page F',
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
-  },
-  {
-    date: '1/7/2023',
-    name: 'Page G',
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
-  },
-];
+import { iTime } from "../../../lib";
 
 const BarGraph = () => {
 
     const { selectedTime, selectedConv } = useAppContext();
+    const { isLoading, isError, data, error } = trpc.time.list.useQuery();
+
+    if (isLoading)
+      return <div>Loading...</div>
+
+    if (isError)
+      return <span>Error: {error.message}</span>
 
     var dataKey = "uv";
     var fill = "#82ca9d";

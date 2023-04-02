@@ -1,12 +1,14 @@
 import { AppDataSource } from "../data-source";
 import { Tutorial } from "../db/factory/tutorial.entity";
 import { Action } from "../db/factory/action.entity";
+import { Time } from "../db/factory/time.entity";
 import { t } from "../trpc";
 import { z } from "zod";
-import { tutorialStatusEnum } from "../../../lib";
+import { tutorialStatusEnum, iTime } from "../../../lib";
 
 const tutorialRepository = AppDataSource.getRepository(Tutorial);
 const actionRepository = AppDataSource.getRepository(Action);
+const timeRepository = AppDataSource.getRepository(Time);
 
 const createSchema = z.object({
   youtubeUrl: z.string(),
@@ -51,9 +53,14 @@ export const tutorialRouter = t.router({
   }),
 });
 
-
 export const actionRouter = t.router({
   list: t.procedure.query(() => {
     return actionRepository.find();
+  }),
+});
+
+export const timeRouter = t.router({
+  list: t.procedure.query( async (): Promise<Time[]> => {
+    return await timeRepository.find();
   }),
 });
