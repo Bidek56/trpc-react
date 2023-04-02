@@ -5,12 +5,12 @@ import { SeederOptions } from 'typeorm-extension';
 import { MainSeeder } from './db/seeds/MainSeeder'
 
 const dbOptions: DataSourceOptions & SeederOptions = {
-  type: "sqlite",
+  type: "better-sqlite3",
   database: "database.sqlite",
 
   // entities: [`${__dirname}/db/factory/*.entity.ts`],
   entities: [Tutorial, Action],
-  factories: ['src/db/factory/**/*.factory{.ts,.js}'],
+  factories: [`${__dirname}/src/db/factory/**/*.factory.ts`],
   seeds: [MainSeeder],
 
   // only used for development

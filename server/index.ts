@@ -11,7 +11,7 @@ const PORT = 4000;
 const app = express();
 app.use(cors());
 
-const connectDb = async () => {
+export const connectDb = async () => {
   try {
     await AppDataSource.initialize();
     console.log("Connected to database");
