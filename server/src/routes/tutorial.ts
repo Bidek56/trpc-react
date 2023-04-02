@@ -4,7 +4,7 @@ import { Action } from "../db/factory/action.entity";
 import { Time } from "../db/factory/time.entity";
 import { t } from "../trpc";
 import { z } from "zod";
-import { tutorialStatusEnum, iTime } from "../../../lib";
+import { tutorialStatusEnum } from "../../../lib";
 
 const tutorialRepository = AppDataSource.getRepository(Tutorial);
 const actionRepository = AppDataSource.getRepository(Action);
