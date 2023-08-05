@@ -3,11 +3,11 @@ import { setSeederFactory } from 'typeorm-extension';
 
 export default setSeederFactory(Action, (faker) => {
     const action = new Action();
-    action.tid = parseInt(faker.random.numeric(6));
-    action.wid = parseInt(faker.random.numeric(6));
-    action.pid = parseInt(faker.random.numeric(6));
-    action.aid = parseInt(faker.random.numeric(6));
+    action.tid = parseInt(faker.string.numeric(6));
+    action.wid = parseInt(faker.string.numeric(6));
+    action.pid = parseInt(faker.string.numeric(6));
+    action.aid = parseInt(faker.string.numeric(6));
     action.date = faker.date.recent();
-    action.status = faker.random.word();
+    action.status = faker.string.alpha();
     return action;
 })
