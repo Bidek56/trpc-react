@@ -16,7 +16,7 @@ describe('tRpc tests', () => {
       const req:any = "";
       const res:any = "";
 
-      const ctx = createContext({ req, res });
+      const ctx = createContext();
 
       // @ts-expect-error type
       global.caller = appRouter.createCaller(ctx);
