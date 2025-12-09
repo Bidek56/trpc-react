@@ -18,23 +18,23 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@trpc/server": "^11.6.0",
-    "better-sqlite3": "^12.4.1",
+    "@trpc/server": "^11.7.2",
+    "better-sqlite3": "^12.5.0",
     "cors": "^2.8.5",
-    "express": "^5.1.0",
+    "express": "^5.2.1",
     "reflect-metadata": "^0.2.2",
-    "typeorm": "^0.3.27",
-    "zod": "^4.1.11"
+    "typeorm": "^0.3.28",
+    "zod": "^4.1.13"
   },
   "devDependencies": {
-    "@faker-js/faker": "^10.0.0",
+    "@faker-js/faker": "^10.1.0",
     "@jorgebodega/typeorm-seeding": "^7.1.0",
     "@types/cors": "^2.8.19",
-    "@types/express": "^5.0.3",
-    "@types/node": "^24.6.2",
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.10.2",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
-    "typeorm-extension": "^3.7.1",
+    "typeorm-extension": "^3.7.2",
     "typescript": "^5.9.3",
     "vitest": "^3.2.4"
   }
