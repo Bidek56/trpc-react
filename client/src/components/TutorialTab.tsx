@@ -1,4 +1,4 @@
-import { iTutorial, tutorialStatus } from "../../../lib";
+import { iTutorial, type tutorialStatus } from "../../../lib";
 import { trpc } from "../utils/trpc";
 import { TutorialCard } from "./TutorialCard";
 

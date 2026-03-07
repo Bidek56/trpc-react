@@ -1,4 +1,4 @@
-import { tutorialStatus, tutorialStatusEnum } from "../../../lib";
+import { type tutorialStatus, tutorialStatusEnum } from "../../../lib";
 import React, {
   createContext,
   SetStateAction,

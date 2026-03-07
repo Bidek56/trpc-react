@@ -1,4 +1,4 @@
-import { iTutorial, tutorialStatus } from "../../../lib/";
+import { iTutorial, type tutorialStatus } from "../../../lib";
 import { useEffect, useState } from "react";
 import { trpc } from "../utils/trpc";
 import { VideoProgressSlider } from "./VideoProgressSlider";

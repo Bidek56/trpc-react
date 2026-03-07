@@ -1,5 +1,5 @@
 {
-    "type": "better-sqlite3",
+    "type": "sqlite",
     "database": "database.sqlite",
     "synchronize": true,
     "logging": false,

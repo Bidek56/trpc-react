@@ -1,6 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Index, Column, BaseEntity } from 'typeorm';
 
-import { tutorialStatus } from '../../../../lib/index'
+import { type tutorialStatus } from '../../../../lib/index'
 
 @Entity('tutorial')
 export class Tutorial extends BaseEntity {
