@@ -2,7 +2,8 @@ export const tutorialStatusEnum = [
   "bar",
   "sankey",
   "inProgress",
-  "tutorial"
+  "tutorial",
+  "upload"
 ] as const;
 
 export type tutorialStatus = typeof tutorialStatusEnum[number];

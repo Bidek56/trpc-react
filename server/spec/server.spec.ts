@@ -35,7 +35,7 @@ describe('tRpc tests', () => {
 
       expect(act).toBeDefined();
       expect(act).not.toBeNull();
-      expect(act.length).toEqual(5);
+      expect(act.length).toEqual(15);
     });
 
     it("test tutorial list", async () => {
@@ -45,7 +45,7 @@ describe('tRpc tests', () => {
 
       expect(tut).toBeDefined();
       expect(tut).not.toBeNull();
-      expect(tut.length).toEqual(5);
+      expect(tut.length).toEqual(11);
     });
 
     it("test tutorial status", async () => {
@@ -55,7 +55,7 @@ describe('tRpc tests', () => {
 
       expect(st).toBeDefined();
       expect(st).not.toBeNull();
-      expect(st.length).toEqual(5);
+      expect(st.length).toEqual(11);
     });
 
     it("test time list", async () => {
@@ -65,6 +65,6 @@ describe('tRpc tests', () => {
 
       expect(tm).toBeDefined();
       expect(tm).not.toBeNull();
-      expect(tm.length).toEqual(5);
+      expect(tm.length).toEqual(3);
     });
 })

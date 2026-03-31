@@ -8,6 +8,7 @@ import { VideoModal } from "../components/VideoModal";
 import { TutorialTab } from "../components/TutorialTab";
 
 import {ActionTab} from "../components/ActionTab";
+import { UploadTab } from "../components/UploadTab";
 
 import SankeyChart from "../components/SankeyChart";
 
@@ -55,6 +56,8 @@ export function Dashboard() {
               return isTabActive(tab.value) && <ActionTab key={tab.value} />
             case "sankey":
               return isTabActive(tab.value) && <SankeyChart key={tab.value} />
+            case "upload":
+              return isTabActive(tab.value) && <UploadTab key={tab.value} />
             default:
               return isTabActive(tab.value) && <TutorialTab key={tab.value} tab={tab.value} />
           }

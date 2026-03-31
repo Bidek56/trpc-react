@@ -18,7 +18,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@trpc/server": "^11.16.0",
+    "@trpc/server": "^11.15.0",
     "cors": "^2.8.6",
     "express": "^5.2.1",
     "reflect-metadata": "^0.2.2",
@@ -36,6 +36,6 @@
     "ts-node-dev": "^2.0.0",
     "typeorm-extension": "^3.9.0",
     "typescript": "^6.0.2",
-    "vitest": "^4.1.2"
+    "vitest": "^4.1.1"
   }
 }
