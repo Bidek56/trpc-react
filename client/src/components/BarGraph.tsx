@@ -30,7 +30,7 @@ const BarGraph = () => {
         fill = "#413ea0";
     }
 
-    const locData: iTime[] = data.map((x) => ({
+    const locData: iTime[] = (data ?? []).map((x) => ({
       ...x, uv: x.uv / selectedConv
           , pv: x.pv / selectedConv
           , amt: x.amt / selectedConv

@@ -1,5 +1,5 @@
 import TopGrid from './TopGrid'
-import  BarGraph from './BarGraph'
+import BarGraph from './BarGraph'
 
 const ActionTab = () => {
   return (

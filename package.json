@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:client": "npm run dev --prefix client",
-    "dev:server": "npm run start --prefix server",
-    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\""
+    "dev:client": "bun run dev --prefix client",
+    "dev:server": "bun run start --prefix server",
+    "dev": "concurrently \"bun run dev:client\" \"bun run dev:server\""
   },
   "keywords": [],
   "author": "",

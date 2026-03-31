@@ -52,7 +52,7 @@ export function Dashboard() {
           switch (tab.value) {
             case "bar":
               // console.log("Tab action:" + tab.value);
-              return isTabActive(tab.value) && <ActionTab key={tab.value} tab={tab.value} />
+              return isTabActive(tab.value) && <ActionTab key={tab.value} />
             case "sankey":
               return isTabActive(tab.value) && <SankeyChart key={tab.value} />
             default:
