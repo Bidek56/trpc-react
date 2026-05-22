@@ -10,23 +10,23 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.2.0",
-    "@tanstack/react-query": "^5.95.2",
-    "@trpc/client": "^11.15.0",
-    "@trpc/react-query": "^11.15.0",
+    "@tanstack/react-query": "^5.100.10",
+    "@trpc/client": "^11.17.0",
+    "@trpc/react-query": "^11.17.0",
     "bulma": "^1.0.4",
     "bulma-slider": "^2.0.5",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
     "react-youtube": "^10.1.0",
-    "recharts": "^3.8.0",
-    "use-debounce": "^10.1.0",
+    "recharts": "^3.8.1",
+    "use-debounce": "^10.1.1",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^5.2.0",
-    "typescript": "^5.9.3",
-    "vite": "^7.3.1"
+    "@vitejs/plugin-react": "^6.0.2",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.13"
   }
 }
