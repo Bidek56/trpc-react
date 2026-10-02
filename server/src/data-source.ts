@@ -6,7 +6,7 @@ import { SeederOptions } from 'typeorm-extension';
 import { MainSeeder } from './db/seeds/MainSeeder'
 
 const dbOptions: DataSourceOptions & SeederOptions = {
-  type: "sqlite",
+  type: "better-sqlite3",
   database: "database.sqlite",
 
   entities: [Tutorial, Action, Time],
